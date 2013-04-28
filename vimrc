@@ -1,6 +1,13 @@
 " Pathogen
 execute pathogen#infect()
 
+" My plugins include:
+"
+"   vim-coffee-script
+"   vim-indent-guides
+"   vim-less
+"   vim-stylus
+
 filetype plugin indent on
 
 set nocompatible
@@ -38,4 +45,3 @@ endif
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-

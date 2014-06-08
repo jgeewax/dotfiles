@@ -18,7 +18,10 @@ jjg-configure() {
   fi
   
   # Install the Google Cloud SDK.
-  curl https://sdk.cloud.google.com | bash
+  if [[ ! -f ~/google-cloud-sdk ]]; then
+    curl https://sdk.cloud.google.com | bash
+    source ~/.bash_profile
+  fi
 
   # Grab configuration files from GitHub.
   curl -LSso ~/.bashrc https://raw.githubusercontent.com/jgeewax/dotfiles/master/.bashrc

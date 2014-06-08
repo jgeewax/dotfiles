@@ -26,6 +26,9 @@ PATH=/usr/local/go/bin:$PATH
 # Add the lessc bin directory to the system path
 PATH=~/node_modules/less/bin:$PATH
 
+# Add Dart SDK to the system path
+PATH=/opt/dart-sdk/bin:$PATH
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -140,6 +143,12 @@ PS1="\[\033[31m\]\$(get_branch)\[\033[37m\]\[\033[00m\]\[\033[38m\]\u@\h:\w$ "
 
 # tmux attach utility (https://github.com/ryandotsmith/tat/)
 export CODE_ROOT_DIRS=~/projects/:~/playground/
+# Make sure the directories exist.
+( IFS=:
+  for d in $CODE_ROOT_DIRS; do
+    mkdir -p $d
+  done
+)
 tat() {
   local session_name="$1"
   local sessions=( $(tmux list-sessions 2>/dev/null | cut -d ":" -f 1 | grep "^$session_name$") )
@@ -187,4 +196,3 @@ _tat() {
 }
 
 complete -o filenames -o nospace -F _tat tat
-

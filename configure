@@ -1,0 +1,26 @@
+# This file will configure a new VM with all the things I want...
+# Usage:
+#   source <(curl https://raw.githubusercontent.com/jgeewax/dotfiles/master/configure)
+
+jjg-configure() {
+  echo "Configuring machine..."
+
+  # Install the appropriate packages.
+  sudo apt-get update
+  sudo apt-get install -y g++ less vim tmux openjdk-7-jdk git subversion
+
+  # Make sure that Vim Pathogen is installed. .vimrc won't work without it.
+  if [[ ! -f ~/.vim/autoload/pathogen.vim ]]; then
+      mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+        curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  fi
+
+  # Grab configuration files from GitHub.
+  curl -LSso ~/.bashrc https://raw.githubusercontent.com/jgeewax/dotfiles/master/.bashrc
+  curl -LSso ~/.tmux.conf https://raw.githubusercontent.com/jgeewax/dotfiles/master/.tmux.conf
+  curl -LSso ~/.vimrc https://raw.githubusercontent.com/jgeewax/dotfiles/master/.vimrc
+
+  echo "Done"
+}
+
+jjg-configure

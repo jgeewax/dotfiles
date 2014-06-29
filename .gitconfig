@@ -1,0 +1,12 @@
+[alias]
+  st = status
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[user]
+  email = jj@geewax.org
+  name = JJ Geewax
+[color]
+  ui = true
+[push]
+  default = simple

@@ -1,6 +1,6 @@
 # This file will configure a new VM with all the things I want...
 # Usage:
-#   source <(curl -L http://bit.ly/jjg-configure)
+#   source <(curl -L config.geewax.org)
 #  OR
 #   source <(curl https://raw.githubusercontent.com/jgeewax/dotfiles/master/configure)
 

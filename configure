@@ -28,6 +28,7 @@ jjg-configure() {
   curl -LSso ~/.tmux.conf https://raw.githubusercontent.com/jgeewax/dotfiles/master/.tmux.conf
   curl -LSso ~/.vimrc https://raw.githubusercontent.com/jgeewax/dotfiles/master/.vimrc
   curl -LSso ~/.gitconfig https://raw.githubusercontent.com/jgeewax/dotfiles/master/.gitconfig
+  curl -LSso ~/.gitignore https://raw.githubusercontent.com/jgeewax/dotfiles/master/.gitignore
 
   echo "Done"
 }

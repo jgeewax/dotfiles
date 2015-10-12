@@ -10,9 +10,13 @@ execute pathogen#infect()
 
 filetype plugin indent on
 
+syntax on
+
+set clipboard=unnamedplus
 set nocompatible
 set ruler
 set mouse=a
+set ttymouse=sgr
 set noerrorbells
 set listchars=tab:>-,trail:-
 set number
@@ -32,6 +36,11 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_enable_on_vim_startup = 1
 
+" 80-character guideline
+if exists("+colorcolumn")
+    set colorcolumn=80
+endif
+
 " Wildmenu
 if has("wildmenu")
     set wildignore+=*.a,*.o,*.pyc
@@ -45,3 +54,6 @@ endif
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+
+" .ng files should act like html files
+au BufReadPost *.ng set syntax=html

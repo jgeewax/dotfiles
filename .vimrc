@@ -16,7 +16,9 @@ set clipboard=unnamedplus
 set nocompatible
 set ruler
 set mouse=a
-set ttymouse=sgr
+if has("mouse_sgr")
+    set ttymouse=sgr
+endif
 set noerrorbells
 set listchars=tab:>-,trail:-
 set number

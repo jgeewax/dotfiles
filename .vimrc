@@ -59,3 +59,6 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 
 " .ng files should act like html files
 au BufReadPost *.ng set syntax=html
+
+" No markdown folding
+let g:vim_markdown_folding_disabled=1

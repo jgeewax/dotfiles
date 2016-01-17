@@ -100,6 +100,9 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
+# less should scroll
+LESS=-R
+
 # Set up a local ssh-agent if necessary.
 SSHAGENT=/usr/bin/ssh-agent
 SSHAGENTARGS="-s"

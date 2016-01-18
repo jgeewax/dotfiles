@@ -41,6 +41,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 " 80-character guideline
 if exists("+colorcolumn")
     set colorcolumn=80
+    hi ColorColumn ctermbg=235 guibg=#262626
 endif
 
 " Wildmenu

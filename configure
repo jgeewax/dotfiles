@@ -16,6 +16,9 @@ jjg-configure() {
       mkdir -p ~/.vim/autoload ~/.vim/bundle && \
         curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
   fi
+  
+  # Install vim plugins
+  git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
 
   # Install the Google Cloud SDK.
   if [[ ! -d ~/google-cloud-sdk ]]; then

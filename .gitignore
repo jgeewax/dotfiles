@@ -1,0 +1,4 @@
+*.sw[op]
+*~
+.env/*
+node_modules/

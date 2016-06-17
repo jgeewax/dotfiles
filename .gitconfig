@@ -1,11 +1,11 @@
 [alias]
   st = status
 [user]
-	name = JJ Geewax
-	email = jjg@google.com
+  name = JJ Geewax
+  email = jj@geewax.org
 [core]
-	excludesfile = /usr/local/google/home/jjg/.gitignore
+  excludesfile = ~/.gitignore
 [push]
-	default = current
+  default = simple
 [diff]
-	tool = meld
+  tool = meld

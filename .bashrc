@@ -88,9 +88,9 @@ export NVM_DIR="/usr/local/google/home/jjg/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/usr/local/google/home/jjg/google-cloud-sdk/path.bash.inc'
+#source '/usr/local/google/home/jjg/google-cloud-sdk/path.bash.inc'
 
 # The next line enables shell command completion for gcloud.
-source '/usr/local/google/home/jjg/google-cloud-sdk/completion.bash.inc'
+#source '/usr/local/google/home/jjg/google-cloud-sdk/completion.bash.inc'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

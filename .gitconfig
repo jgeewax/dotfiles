@@ -1,11 +1,14 @@
 [alias]
   st = status
-[user]
-  name = JJ Geewax
-  email = jj@geewax.org
 [core]
   excludesfile = ~/.gitignore
+  editor = vim
+[user]
+  email = jj@geewax.org
+  name = JJ Geewax
+[color]
+  ui = true
 [push]
   default = simple
-[diff]
-  tool = meld
+[commit]
+  template = ~/.git_commit_msg.txt

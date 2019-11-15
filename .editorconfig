@@ -1,10 +1,30 @@
-[*{.js,py}]
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Most languages support UTF-8.
+[*.{js,py,go}]
 charset = utf-8
 
+# Javascript should use 2 space indents
 [*.js]
 indent_style = space
 indent_size = 2
 
+# Python should use 4 space indents.
 [*.py]
 indent_style = space
 indent_size = 4
+
+# Matches multiple files with brace expansion notation
+# Set default charset
+[*.go]
+indent_style = tab
+indent_size = 2
+trim_trailing_whitespace = true
